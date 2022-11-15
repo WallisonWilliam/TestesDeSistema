@@ -3,8 +3,8 @@
 </div>
 
 Frameworks: 
-- [JUnit] 
-- [Selenium] 
+- [JUnit] (https://junit.org/junit5/)
+- [Selenium] (https://www.selenium.dev)
 
 <br>
 
