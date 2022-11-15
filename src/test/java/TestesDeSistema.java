@@ -25,21 +25,32 @@ public class TestesDeSistema {
     }
 
     @Test
-    public void abrirPaginaTest() {
+    public void abrirPaginaTest() throws InterruptedException {
         webDriver.get("https://github.com/");
+        Thread.sleep(2000);
         Assertions.assertEquals("https://github.com/", webDriver.getCurrentUrl());
     }
 
     @Test
-    public void abrirPerfilTest() {
+    public void abrirPerfilTest() throws InterruptedException {
         webDriver.get("https://github.com/wallisonwilliam/");
+        Thread.sleep(2000);
         Assertions.assertEquals("WallisonWilliam (Wallison William) · GitHub", webDriver.getTitle());
     }
 
     @Test
-    public void pesquisarPerfilTest() {
+    public void pesquisarPerfilTest() throws InterruptedException {
         webDriver.get("https://github.com");
         webDriver.findElement(By.xpath("//*[@class=\"form-control header-search-wrapper input-sm p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center\"]")).sendKeys("Wallison William", Keys.ENTER);
+        Thread.sleep(2000);
         Assertions.assertTrue(webDriver.getCurrentUrl().contains("/search?q=Wallison+William"), webDriver.getCurrentUrl());
+    }
+
+    @Test
+    public void abrirRepositorioTest() throws InterruptedException {
+        webDriver.get("https://github.com/search?q=WallisonWilliam");
+        webDriver.findElement(By.xpath("//*[@class=\"v-align-middle\"]")).click();
+        Thread.sleep(2000);
+        Assertions.assertEquals("https://github.com/WallisonWilliam/WallisonWilliam", webDriver.getCurrentUrl());
     }
 }
