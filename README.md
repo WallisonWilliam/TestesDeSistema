@@ -3,9 +3,10 @@
 </div>
 
 Frameworks: 
-- [JUnit] (https://junit.org/junit5/)
-- [Selenium] (https://www.selenium.dev)
+- [JUnit](https://junit.org/junit5)
+- [Selenium](https://www.selenium.dev)
 
 <br>
 
 Sistema: GitHub (https://github.com/)
+
