@@ -36,4 +36,10 @@ public class TestesDeSistema {
         Assertions.assertEquals("WallisonWilliam (Wallison William) · GitHub", webDriver.getTitle());
     }
 
+    @Test
+    public void pesquisarPerfilTest() {
+        webDriver.get("https://github.com");
+        webDriver.findElement(By.xpath("//*[@class=\"form-control header-search-wrapper input-sm p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center\"]")).sendKeys("Wallison William", Keys.ENTER);
+        Assertions.assertTrue(webDriver.getCurrentUrl().contains("/search?q=Wallison+William"), webDriver.getCurrentUrl());
+    }
 }
