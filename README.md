@@ -8,4 +8,4 @@ Frameworks:
 
 <br>
 
-Sistema: github (https://github.com/)
+Sistema: GitHub (https://github.com/)
